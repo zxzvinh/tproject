@@ -1,0 +1,29 @@
+extends ../layout
+block feet
+  script(src='/views/login/index.min.js')
+block content
+    .w-center
+      .heading
+        h1 Login
+        br
+      div#login
+      script(type='text/template', id='tmpl-login')
+        form
+          div.alerts
+            |<% _.each(errors, function(err) { %>
+            div.alert.alert-danger.alert-dismissable
+              button.close(type='button', data-dismiss='alert') &times;
+              |<%- err %>
+            |<% }); %>
+          div.form-group(class!='<%- errfor.username ? "has-error" : "" %>')
+            label Username or Email:
+            input.form-control(type='text', name='username', value!='<%= username %>')
+            span.help-block <%- errfor.username %>
+          div.form-group(class!='<%- errfor.password ? "has-error" : "" %>')
+            label Password:
+            input.form-control(type='password', name='password', value!='<%= password %>')
+            span.help-block <%- errfor.password %>
+          div.form-actions
+            button.btn.btn-primary.btn-login(type='button') Login
+            |&nbsp;
+           // a.btn.btn-link(href='/forgot-password') Forgot your password?

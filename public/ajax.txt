@@ -1,0 +1,34 @@
+{
+	"data":[
+		{
+	      "DT_RowId": "row_1",
+	      "mon":"abc",
+	      "phan_loai":"nuoc",
+	      "gia":"10",
+	      "gia_nhap":"5"
+		},
+		{
+	      "DT_RowId": "row_2",
+	      "mon":"abc2",
+	      "phan_loai":"nuoc2",
+	      "gia":"102",
+	      "gia_nhap":"25"
+		},
+		{
+	      "DT_RowId": "row_3",
+	      "mon":"abc3",
+	      "phan_loai":"nuoc3",
+	      "gia":"103",
+	      "gia_nhap":"53"
+		},
+		{
+	      "DT_RowId": "row_4",
+	      "mon":"abc4",
+	      "phan_loai":"nuoc4",
+	      "gia":"104",
+	      "gia_nhap":"54"
+		}
+	],
+	"options": [],
+  	"files": []
+}

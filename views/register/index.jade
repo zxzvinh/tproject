@@ -1,0 +1,34 @@
+extends ../layout
+
+block feet
+  script(src='/views/register/index.min.js')
+
+block content
+  .w-center
+    .heading
+      h1 Add user
+      br
+    div#signup
+      script(type='text/template', id='tmpl-signup')
+        form
+          div.alerts
+            |<% _.each(errors, function(err) { %>
+            div.alert.alert-danger.alert-dismissable
+              button.close(type='button', data-dismiss='alert') &times;
+              |<%- err %>
+            |<% }); %>
+          div.form-group(class!='<%= errfor.username ? "has-error" : "" %>')
+            label Username:
+            input.form-control(type='text', name='username', value!='<%= username %>')
+            span.help-block <%- errfor.username %>
+          div.form-group(class!='<%= errfor.email ? "has-error" : "" %>')
+            label Email:
+            input.form-control(type='text', name='email', value!='<%= email %>')
+            span.help-block <%- errfor.email %>
+          div.form-group(class!='<%= errfor.password ? "has-error" : "" %>')
+            label Create a Password:
+            input.form-control(type='password', name='password', value!='<%= password %>')
+            span.help-block <%- errfor.password %>
+          div.form-group
+            button.btn.btn-primary.btn-signup(type='button') Add User
+

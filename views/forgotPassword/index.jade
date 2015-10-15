@@ -1,0 +1,23 @@
+extends ../layout
+block feet
+  script(src='/views/forgotpassword/index.min.js')
+block content
+  .w-center
+      .heading
+        h1 Forgot password
+        br
+      div#forgotpassword
+        script(type='text/template', id='tmpl-forgotpassword')
+          form
+            div.alerts
+              |<% _.each(errors, function(err) { %>
+              div.alert.alert-danger.alert-dismissable
+                button.close(type='button', data-dismiss='alert') &times;
+                |<%- err %>
+              |<% }); %>
+            div.form-group(class!='<%- errfor.email ? "has-error" : "" %>')
+              label Email:
+              input.form-control(type='text', name='email', value!='<%= email %>')
+              span.help-block <%- errfor.email %>
+            div.form-actions
+              button.btn.btn-primary.btn-forgot(type='button') Send mail

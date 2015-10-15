@@ -1,0 +1,74 @@
+.side-menu
+    nav.navbar.navbar-default(role='navigation')
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        .brand-wrapper
+          // Hamburger
+          button.navbar-toggle(type='button')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          // Brand
+          .brand-name-wrapper
+            a.navbar-brand(href='#')
+              | Chái cô tây
+          // Search
+           a#search-trigger.btn.btn-default(data-toggle='collapse', href='#search')
+            span.glyphicon.glyphicon-search
+          // Search body
+          #search.panel-collapse.collapse
+            .panel-body
+              form.navbar-form(role='search')
+                .form-group
+                  input.form-control(type='text', placeholder='Search')
+                button.btn.btn-default(type='submit')
+                  span.glyphicon.glyphicon-ok
+      // Main Menu
+      .side-menu-container
+        ul.nav.navbar-nav
+          li
+            a(href='#')
+              span.glyphicon.glyphicon-send
+              |  Bàn
+          li.active
+            a(href='#')
+              span.glyphicon.glyphicon-plane
+              |  Menu
+          li
+            a(href='#')
+              span.glyphicon.glyphicon-cloud
+              |  Nhập hàng
+          //
+           li#dropdown.panel.panel-default
+            a(data-toggle='collapse', href='#dropdown-lvl1')
+              span.glyphicon.glyphicon-user
+              |  Sub Level
+              span.caret
+            #dropdown-lvl1.panel-collapse.collapse
+              .panel-body
+                ul.nav.navbar-nav
+                  li
+                    a(href='#') Link
+                  li
+                    a(href='#') Link
+                  li
+                    a(href='#') Link
+                  li#dropdown.panel.panel-default
+                    a(data-toggle='collapse', href='#dropdown-lvl2')
+                      span.glyphicon.glyphicon-off
+                      |  Sub Level
+                      span.caret
+                    #dropdown-lvl2.panel-collapse.collapse
+                      .panel-body
+                        ul.nav.navbar-nav
+                          li
+                            a(href='#') Link
+                          li
+                            a(href='#') Link
+                          li
+                            a(href='#') Link
+          li
+            a(href='#')
+              span.glyphicon.glyphicon-signal
+              |  Thống kê

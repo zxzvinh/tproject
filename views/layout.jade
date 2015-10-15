@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    block head
+      title #{title}
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/layouts/core.min.css')
+    link(rel='stylesheet', href='/layouts/datatables.min.css')
+    block neck
+  body
+    .row
+      if(user)
+        include sidebar.jade
+        .container-fluid
+          .side-body
+            block content
+      else
+          .container-fluid
+            block content
+
+    div.ajax-spinner
+      img(src='/media/ajax-pulse.gif', alt='Loading')
+
+    //if lte IE 9
+      script(src='/layouts/ie-sucks.min.js?#{cacheBreaker}')
+    script(src='/layouts/core.min.js?#{cacheBreaker}')
+    script(src='/layouts/script.min.js')
+
+    block feet
