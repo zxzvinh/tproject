@@ -1,2 +1,2 @@
-# vj
-nodejs vj
+# simple crud project
+nodejs simple crud
