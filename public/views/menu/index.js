@@ -54,7 +54,7 @@
                     name: "gia"
                 }, {
                     label: "Giá nhập:",
-                    name: "gia_nhap"
+                    name: "nhap"
                 }
             ]
     	} );
@@ -77,7 +77,7 @@
                 { data: "mon" },
                 { data: "phan_loai" },
                 { data: "gia" },
-                { data: "gia_nhap" }
+                { data: "nhap" }
             ],
             select: {
                 style:    'os',

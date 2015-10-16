@@ -4,7 +4,7 @@ exports = module.exports = function(app,mongoose){
 		mon:{type : String, unique: true },
 		phan_loai:{type:String, default:"Drinks"},
 		gia:Number,
-		gia_nhap:{type:Number,default:null},
+		nhap:{type:Number,default:null},
 		isActive:{type:String, default:"active"},
 		created: { type: Date, default: Date.now },
 		modified: { type: Date, default: Date.now }

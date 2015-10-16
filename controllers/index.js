@@ -8,7 +8,7 @@ var getReturnUrl = function(req) {
 };
 exports.init = function(req, res){
   if (req.isAuthenticated()) {
-    res.redirect('/admin/menu');
+    res.redirect('/admin/table');
   }
   else {
     res.render('login/index');

@@ -54,7 +54,7 @@ exports = module.exports = function(app, passport) {
   app.post('/admin/menu', require('./controllers/admin/menu').post );
   app.get('/admin/menu/list', require('./controllers/admin/menu').list );
 
-
+  app.get('/admin/table', require('./controllers/admin/table').init );
   //front end
 
   // app.get('/about/', require('./views/about/index').init);
